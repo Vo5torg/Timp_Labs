@@ -1,0 +1,42 @@
+\begin{theindex}
+
+  \item {Cipher}, \hyperpage{7}
+    \subitem {Cipher}, \hyperpage{8}
+    \subitem {decrypt}, \hyperpage{8}
+    \subitem {encrypt}, \hyperpage{9}
+    \subitem {get\+Valid\+Cipher\+Text}, \hyperpage{9}
+    \subitem {get\+Valid\+Key}, \hyperpage{10}
+    \subitem {get\+Valid\+Open\+Text}, \hyperpage{10}
+    \subitem {set\+\_\+key}, \hyperpage{11}
+    \subitem {set\+\_\+tableform}, \hyperpage{11}
+  \item {Cipher.\+h}, \hyperpage{15}
+  \item {cipher\+\_\+error}, \hyperpage{11}
+    \subitem {cipher\+\_\+error}, \hyperpage{12, 13}
+
+  \indexspace
+
+  \item {decrypt}
+    \subitem {Cipher}, \hyperpage{8}
+
+  \indexspace
+
+  \item {encrypt}
+    \subitem {Cipher}, \hyperpage{9}
+
+  \indexspace
+
+  \item {get\+Valid\+Cipher\+Text}
+    \subitem {Cipher}, \hyperpage{9}
+  \item {get\+Valid\+Key}
+    \subitem {Cipher}, \hyperpage{10}
+  \item {get\+Valid\+Open\+Text}
+    \subitem {Cipher}, \hyperpage{10}
+
+  \indexspace
+
+  \item {set\+\_\+key}
+    \subitem {Cipher}, \hyperpage{11}
+  \item {set\+\_\+tableform}
+    \subitem {Cipher}, \hyperpage{11}
+
+\end{theindex}
