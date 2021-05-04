@@ -1,0 +1,240 @@
+\hypertarget{classCipher}{}\section{Класс Cipher}
+\label{classCipher}\index{Cipher@{Cipher}}
+
+
+Шифрование методом табличной перестановки  
+
+
+
+
+{\ttfamily \#include $<$Cipher.\+h$>$}
+
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCipher_ae728d0917db639dd49638a268298391f}\label{classCipher_ae728d0917db639dd49638a268298391f}} 
+\hyperlink{classCipher_ae728d0917db639dd49638a268298391f}{Cipher} ()=delete
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию запрещён \end{DoxyCompactList}\item 
+\hyperlink{classCipher_a876edcc7064f450935baedce442f1556}{Cipher} (std\+::wstring \&ws\+\_\+key)
+\begin{DoxyCompactList}\small\item\em Конструктор принимает ключ (количество столбцов в таблице) \end{DoxyCompactList}\item 
+std\+::wstring \hyperlink{classCipher_aebf6146bc7bb26d9b934ced49ed6dd19}{encrypt} (std\+::wstring \&ws\+\_\+open\+\_\+text)
+\begin{DoxyCompactList}\small\item\em Метод для зашифрования \end{DoxyCompactList}\item 
+std\+::wstring \hyperlink{classCipher_accb629416e343719818e557b8eb994dd}{decrypt} (const std\+::wstring \&ws\+\_\+cipher\+\_\+text)
+\begin{DoxyCompactList}\small\item\em Метод для расшифрования \end{DoxyCompactList}\item 
+void \hyperlink{classCipher_ae40ca9f1c13890b6d734aa9228d0de28}{set\+\_\+tableform} (const std\+::wstring \&ws\+\_\+text)
+\begin{DoxyCompactList}\small\item\em Формирование информации о таблице \end{DoxyCompactList}\item 
+void \hyperlink{classCipher_a86145f7c206e6d75852a28ffe29dc47a}{set\+\_\+key} (std\+::wstring \&ws\+\_\+key)
+\begin{DoxyCompactList}\small\item\em Установка нового ключа \end{DoxyCompactList}\item 
+int \hyperlink{classCipher_aec5962319726c6dd1bd6ee2f7b71e001}{get\+Valid\+Key} (std\+::wstring \&ws\+\_\+key)
+\begin{DoxyCompactList}\small\item\em Проверка на правильность ключа \end{DoxyCompactList}\item 
+std\+::wstring \hyperlink{classCipher_a0dc9d7c13d6a7401bfee1f1171f6ee12}{get\+Valid\+Open\+Text} (const std\+::wstring \&ws\+\_\+open\+\_\+text)
+\begin{DoxyCompactList}\small\item\em Проверка на правильность текста для зашифровки \end{DoxyCompactList}\item 
+std\+::wstring \hyperlink{classCipher_ab0e1d86022b18c1bec07cde229ba87e6}{get\+Valid\+Cipher\+Text} (const std\+::wstring \&ws\+\_\+cipher\+\_\+text)
+\begin{DoxyCompactList}\small\item\em Проверка на правильность текста для расшифровки \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCipher_a771e84ee997948183d065a2804f3cda6}\label{classCipher_a771e84ee997948183d065a2804f3cda6}} 
+std\+::wstring\+\_\+convert$<$ std\+::codecvt\+\_\+utf8$<$ wchar\+\_\+t $>$, wchar\+\_\+t $>$ \hyperlink{classCipher_a771e84ee997948183d065a2804f3cda6}{codec}
+\begin{DoxyCompactList}\small\item\em codec для преобразования в широкий формат строки и обратно \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCipher_a4fa1fd596bd312cbf0f7628ac72a60d5}\label{classCipher_a4fa1fd596bd312cbf0f7628ac72a60d5}} 
+int \hyperlink{classCipher_a4fa1fd596bd312cbf0f7628ac72a60d5}{columns}
+\begin{DoxyCompactList}\small\item\em Количество столбцов в таблице (ключ) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCipher_ace25b12087068c25c945e2a32a236f9e}\label{classCipher_ace25b12087068c25c945e2a32a236f9e}} 
+int \hyperlink{classCipher_ace25b12087068c25c945e2a32a236f9e}{rows}
+\begin{DoxyCompactList}\small\item\em Количество строк в таблице \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCipher_a84f8e0da2b41787fa92554549963f052}\label{classCipher_a84f8e0da2b41787fa92554549963f052}} 
+int \hyperlink{classCipher_a84f8e0da2b41787fa92554549963f052}{len\+\_\+text}
+\begin{DoxyCompactList}\small\item\em Количество символов в слове \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Шифрование методом табличной перестановки 
+
+Ключ устанавливается в конструкторе, а также с помощью метода set\+\_\+key. Для зашифрования и расшифрования предназначены методы encrypt и decrypt. Метод set\+\_\+tableform -\/ вспомогающий. Методы\+: get\+Valid\+Key, get\+Valid\+Open\+Text, get\+Valid\+Cipher\+Text -\/ специализируются на проверке входных данных. \begin{DoxyWarning}{Предупреждения}
+Реализация только для русского языка! С использованием wstring.\+Шифрование методом табличной перестановки 
+\end{DoxyWarning}
+
+
+\subsection{Конструктор(ы)}
+\mbox{\Hypertarget{classCipher_a876edcc7064f450935baedce442f1556}\label{classCipher_a876edcc7064f450935baedce442f1556}} 
+\index{Cipher@{Cipher}!Cipher@{Cipher}}
+\index{Cipher@{Cipher}!Cipher@{Cipher}}
+\subsubsection{\texorpdfstring{Cipher()}{Cipher()}}
+{\footnotesize\ttfamily Cipher\+::\+Cipher (\begin{DoxyParamCaption}\item[{std\+::wstring \&}]{ws\+\_\+key }\end{DoxyParamCaption})}
+
+
+
+Конструктор принимает ключ (количество столбцов в таблице) 
+
+Конструктор, принимающий на вход ключ, устанавливает кол-\/во столбцов
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ws\+\_\+key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ничего не возвращает 
+\end{DoxyReturn}
+
+
+\subsection{Методы}
+\mbox{\Hypertarget{classCipher_accb629416e343719818e557b8eb994dd}\label{classCipher_accb629416e343719818e557b8eb994dd}} 
+\index{Cipher@{Cipher}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!Cipher@{Cipher}}
+\subsubsection{\texorpdfstring{decrypt()}{decrypt()}}
+{\footnotesize\ttfamily std\+::wstring Cipher\+::decrypt (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{cipher\+\_\+text }\end{DoxyParamCaption})}
+
+
+
+Метод для расшифрования 
+
+Метод decrypt расшифровывает текст.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em cipher\+\_\+text} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Зашифрованный текст. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCipher_aebf6146bc7bb26d9b934ced49ed6dd19}\label{classCipher_aebf6146bc7bb26d9b934ced49ed6dd19}} 
+\index{Cipher@{Cipher}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!Cipher@{Cipher}}
+\subsubsection{\texorpdfstring{encrypt()}{encrypt()}}
+{\footnotesize\ttfamily std\+::wstring Cipher\+::encrypt (\begin{DoxyParamCaption}\item[{std\+::wstring \&}]{open\+\_\+text }\end{DoxyParamCaption})}
+
+
+
+Метод для зашифрования 
+
+Метод encrypt зашифровывает текст.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em open\+\_\+text} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Зашифрованный текст 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCipher_ab0e1d86022b18c1bec07cde229ba87e6}\label{classCipher_ab0e1d86022b18c1bec07cde229ba87e6}} 
+\index{Cipher@{Cipher}!get\+Valid\+Cipher\+Text@{get\+Valid\+Cipher\+Text}}
+\index{get\+Valid\+Cipher\+Text@{get\+Valid\+Cipher\+Text}!Cipher@{Cipher}}
+\subsubsection{\texorpdfstring{get\+Valid\+Cipher\+Text()}{getValidCipherText()}}
+{\footnotesize\ttfamily std\+::wstring Cipher\+::get\+Valid\+Cipher\+Text (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{ws\+\_\+cipher\+\_\+text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Проверка на правильность текста для расшифровки 
+
+Данный метод проверяет зашифрованный текст на правильность.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ws\+\_\+cipher\+\_\+text} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Зашифрованный текст 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \hyperlink{classcipher__error}{cipher\+\_\+error},если} & текст пустой или невалидный \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classCipher_aec5962319726c6dd1bd6ee2f7b71e001}\label{classCipher_aec5962319726c6dd1bd6ee2f7b71e001}} 
+\index{Cipher@{Cipher}!get\+Valid\+Key@{get\+Valid\+Key}}
+\index{get\+Valid\+Key@{get\+Valid\+Key}!Cipher@{Cipher}}
+\subsubsection{\texorpdfstring{get\+Valid\+Key()}{getValidKey()}}
+{\footnotesize\ttfamily int Cipher\+::get\+Valid\+Key (\begin{DoxyParamCaption}\item[{std\+::wstring \&}]{ws\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Проверка на правильность ключа 
+
+Данный метод проверяет ключ на правильность.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ws\+\_\+key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ключ 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \hyperlink{classcipher__error}{cipher\+\_\+error},если} & ключ пустой или невалидный \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classCipher_a0dc9d7c13d6a7401bfee1f1171f6ee12}\label{classCipher_a0dc9d7c13d6a7401bfee1f1171f6ee12}} 
+\index{Cipher@{Cipher}!get\+Valid\+Open\+Text@{get\+Valid\+Open\+Text}}
+\index{get\+Valid\+Open\+Text@{get\+Valid\+Open\+Text}!Cipher@{Cipher}}
+\subsubsection{\texorpdfstring{get\+Valid\+Open\+Text()}{getValidOpenText()}}
+{\footnotesize\ttfamily std\+::wstring Cipher\+::get\+Valid\+Open\+Text (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{ws\+\_\+open\+\_\+text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Проверка на правильность текста для зашифровки 
+
+Данный метод проверяет открытый текст на правильность. Строчные буквы превращаются в прописные. Все не-\/буквы удаляются.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ws\+\_\+open\+\_\+text} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Текст для расшифровки 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \hyperlink{classcipher__error}{cipher\+\_\+error},если} & текст пустой \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classCipher_a86145f7c206e6d75852a28ffe29dc47a}\label{classCipher_a86145f7c206e6d75852a28ffe29dc47a}} 
+\index{Cipher@{Cipher}!set\+\_\+key@{set\+\_\+key}}
+\index{set\+\_\+key@{set\+\_\+key}!Cipher@{Cipher}}
+\subsubsection{\texorpdfstring{set\+\_\+key()}{set\_key()}}
+{\footnotesize\ttfamily void Cipher\+::set\+\_\+key (\begin{DoxyParamCaption}\item[{std\+::wstring \&}]{ws\+\_\+key }\end{DoxyParamCaption})}
+
+
+
+Установка нового ключа 
+
+Метод, принимающий на вход ключ, устанавливает кол-\/во столбцов
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ws\+\_\+key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Ничего не возвращает 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCipher_ae40ca9f1c13890b6d734aa9228d0de28}\label{classCipher_ae40ca9f1c13890b6d734aa9228d0de28}} 
+\index{Cipher@{Cipher}!set\+\_\+tableform@{set\+\_\+tableform}}
+\index{set\+\_\+tableform@{set\+\_\+tableform}!Cipher@{Cipher}}
+\subsubsection{\texorpdfstring{set\+\_\+tableform()}{set\_tableform()}}
+{\footnotesize\ttfamily void Cipher\+::set\+\_\+tableform (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{open\+\_\+text }\end{DoxyParamCaption})}
+
+
+
+Формирование информации о таблице 
+
+Принимает текст для зашифровки, далее по нему формирует кол-\/во строк в таблице, а также получает длину текста.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em open\+\_\+text} & \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Cipher_8h}{Cipher.\+h}\item 
+Cipher.\+cpp\end{DoxyCompactItemize}
